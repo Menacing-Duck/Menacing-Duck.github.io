@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #d2a64c, #99740e);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 100%;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .title {
+            margin: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .download-buttons {
+            text-align: center;
+        }
+
+        .download-buttons button {
+            background-color: #d2a64c;
+            border: none;
+            color: #000;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .download-buttons button:hover {
+            background-color: #b79144;
+            transform: scale(1.05);
+        }
+
+        .download-buttons button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Placeholder Logo" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="dl.html">Download</a>
+        </nav>
+    </header>
+    <div class="title">Downloads</div>
+    <div class="download-buttons">
+        <button onclick="window.location.href='CdC.pdf'">Download CDC.pdf</button>
+        <button onclick="window.location.href='rapport.pdf'">Download rapport.pdf</button>
+        <button onclick="window.location.href='game.x86_64'">Download game.x86_64</button>
+    </div>
+</body>
+</html>

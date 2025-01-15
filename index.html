@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Rito</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    header nav a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .sky {
+      background-color: #87CEEB; /* Sky Blue */
+      position: relative;
+      height: 52vh; /* Reduced by 20% */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .sky .sun {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: #FFD700;
+      border-radius: 50%;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+    }
+
+    .surface {
+      background-color: #87CEEB; /* Sky Blue */
+      text-align: center;
+      padding: 50px 20px;
+      height: 10vh; /* Reduced by 20% */
+    }
+
+    .surface h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .mountain {
+      background: linear-gradient(to bottom, #87CEEB 50%, #32a852 50%); /* Transition from blue to green */
+    }
+
+    .underground {
+      background-color: #99740e; /* Gray */
+      padding: 50px 20px;
+      text-align: center;
+      height: 72vh;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #444d5f;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 40px; /* Doubled size */
+      text-align: center;
+      max-height: 500px;
+      height: 150%;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .card:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    .card:nth-child(2) {
+      align-self: flex-end;
+    }
+
+    .card:nth-child(3) {
+      align-self: flex-start;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .tamer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.25);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Placeholder Logo" />
+    <nav>
+      <a href="#">Menu</a>
+      <a href="#about">A propos</a>
+      <a href="dl.html">Téléchargements</a>
+    </nav>
+  </header>
+
+  <section class="sky">
+    <div class="sun"></div>
+  </section>
+  <section class="surface">
+    <h1>Project Rito</h1>
+    <img class="tamer" src="logo.png" alt="Placeholder Logo" />
+  </section>
+
+  <section class="mountain">
+    <svg id="visual" viewBox="0 350 900 250" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <path d="M0 467L18.8 448.7C37.7 430.3 75.3 393.7 112.8 383C150.3 372.3 187.7 387.7 225.2 402.3C262.7 417 300.3 431 337.8 440.5C375.3 450 412.7 455 450.2 442.2C487.7 429.3 525.3 398.7 562.8 388.3C600.3 378 637.7 388 675.2 395.8C712.7 403.7 750.3 409.3 787.8 402.5C825.3 395.7 862.7 376.3 881.3 366.7L900 357L900 601L881.3 601C862.7 601 825.3 601 787.8 601C750.3 601 712.7 601 675.2 601C637.7 601 600.3 601 562.8 601C525.3 601 487.7 601 450.2 601C412.7 601 375.3 601 337.8 601C300.3 601 262.7 601 225.2 601C187.7 601 150.3 601 112.8 601C75.3 601 37.7 601 18.8 601L0 601Z" fill="#1f6933"></path>
+      <path d="M0 445L18.8 453.2C37.7 461.3 75.3 477.7 112.8 479.2C150.3 480.7 187.7 467.3 225.2 449.7C262.7 432 300.3 410 337.8 417C375.3 424 412.7 460 450.2 461.8C487.7 463.7 525.3 431.3 562.8 418.3C600.3 405.3 637.7 411.7 675.2 419C712.7 426.3 750.3 434.7 787.8 442.8C825.3 451 862.7 459 881.3 463L900 467L900 601L881.3 601C862.7 601 825.3 601 787.8 601C750.3 601 712.7 601 675.2 601C637.7 601 600.3 601 562.8 601C525.3 601 487.7 601 450.2 601C412.7 601 375.3 601 337.8 601C300.3 601 262.7 601 225.2 601C187.7 601 150.3 601 112.8 601C75.3 601 37.7 601 18.8 601L0 601Z" fill="#26823f"></path>
+      <path d="M0 496L18.8 494.7C37.7 493.3 75.3 490.7 112.8 491.2C150.3 491.7 187.7 495.3 225.2 488.5C262.7 481.7 300.3 464.3 337.8 466.2C375.3 468 412.7 489 450.2 496.3C487.7 503.7 525.3 497.3 562.8 490.3C600.3 483.3 637.7 475.7 675.2 468.7C712.7 461.7 750.3 455.3 787.8 465C825.3 474.7 862.7 500.3 881.3 513.2L900 526L900 601L881.3 601C862.7 601 825.3 601 787.8 601C750.3 601 712.7 601 675.2 601C637.7 601 600.3 601 562.8 601C525.3 601 487.7 601 450.2 601C412.7 601 375.3 601 337.8 601C300.3 601 262.7 601 225.2 601C187.7 601 150.3 601 112.8 601C75.3 601 37.7 601 18.8 601L0 601Z" fill="#298a44"></path>
+      <path d="M0 480L18.8 479.3C37.7 478.7 75.3 477.3 112.8 488C150.3 498.7 187.7 521.3 225.2 525C262.7 528.7 300.3 513.3 337.8 513.5C375.3 513.7 412.7 529.3 450.2 535C487.7 540.7 525.3 536.3 562.8 530C600.3 523.7 637.7 515.3 675.2 515.8C712.7 516.3 750.3 525.7 787.8 525.3C825.3 525 862.7 515 881.3 510L900 505L900 601L881.3 601C862.7 601 825.3 601 787.8 601C750.3 601 712.7 601 675.2 601C637.7 601 600.3 601 562.8 601C525.3 601 487.7 601 450.2 601C412.7 601 375.3 601 337.8 601C300.3 601 262.7 601 225.2 601C187.7 601 150.3 601 112.8 601C75.3 601 37.7 601 18.8 601L0 601Z" fill="#2b9448"></path>
+      <path d="M0 571L18.8 572.2C37.7 573.3 75.3 575.7 112.8 577C150.3 578.3 187.7 578.7 225.2 571.8C262.7 565 300.3 551 337.8 541.7C375.3 532.3 412.7 527.7 450.2 534.3C487.7 541 525.3 559 562.8 566.8C600.3 574.7 637.7 572.3 675.2 569.3C712.7 566.3 750.3 562.7 787.8 558.2C825.3 553.7 862.7 548.3 881.3 545.7L900 543L900 601L881.3 601C862.7 601 825.3 601 787.8 601C750.3 601 712.7 601 675.2 601C637.7 601 600.3 601 562.8 601C525.3 601 487.7 601 450.2 601C412.7 601 375.3 601 337.8 601C300.3 601 262.7 601 225.2 601C187.7 601 150.3 601 112.8 601C75.3 601 37.7 601 18.8 601L0 601Z" fill="#32a852"></path>
+    </svg>
+  </section>
+
+  <section class="underground" id="about">
+    <h2>À propos</h2>
+    <div class="cards">
+      <div class="card">
+        <h2>Menacing Duck studios</h2>
+        <H3>Nous sommes un petit studio strasbourgeois de 5 membres qui a été créer en 2022 qui souhaite développer des produits utiles et ludiques pour ses utilisateurs</H3>
+      </div>
+      <div class="card">
+        <h2>le jeu</h2>
+        <H3>le jeu projet rito est un jeu multijoeur coopératif a 5 joueurs, chaque mission se déroule sur une carte en 3 parites, une collecte de ressources, une phase de défence et une phase d'attaque</H3>
+      </div>
+      <div class="card">
+        <h2>Info Card 3</h2>
+        <p>This is the third info card.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
